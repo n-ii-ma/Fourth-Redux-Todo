@@ -18,7 +18,6 @@ const InputField = () => {
         value={inputFieldSlice}
         onChange={handleInputField}
         placeholder="Add Task..."
-        required
       />
     </div>
   );
