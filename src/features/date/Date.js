@@ -1,9 +1,21 @@
-const Date = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+import { useSelector, useDispatch } from "react-redux";
+import { selectDateSlice } from "./dateSlice";
+import { setDate } from "./dateSlice";
 
-export default Date
+const Date = () => {
+  const dispatch = useDispatch();
+  const dateSlice = useSelector(selectDateSlice);
+
+  // Update Date State
+  const handleDate = (e) => dispatch(setDate(e.target.value));
+
+  return (
+    <div>
+      <label>Enter Date:</label>
+      <br />
+      <input type="date" value={dateSlice} onChange={handleDate} required />
+    </div>
+  );
+};
+
+export default Date;
