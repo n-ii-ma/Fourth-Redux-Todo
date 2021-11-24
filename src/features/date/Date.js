@@ -13,7 +13,7 @@ const Date = () => {
     <div>
       <label>Enter Date:</label>
       <br />
-      <input type="date" value={dateSlice} onChange={handleDate} required />
+      <input type="date" value={dateSlice} onChange={handleDate} />
     </div>
   );
 };
